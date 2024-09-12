@@ -1,0 +1,88 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex:1;
+}
+.navbar{
+     height:3rem;
+    background-color:rgb(243, 233, 233);
+}
+#fa-solid{
+    color:red;
+    font-size: 2rem;
+}
+.nav-link{
+    color:#222222 !important;
+}
+.first{
+    font-size: 1rem;
+    text-align: center;
+    color: #222222;
+    width: 100%;
+}
+.first i{
+    margin-right:1rem;
+}
+.two{
+    color:black;
+    text-align: center;
+    font-size:1rem;
+}
+.three{
+    color:black;
+    text-align: center;
+    font-size:1rem;
+    text-decoration: none;
+}
+.div-container{
+    background-color: #ede3e3;
+}
+.three a{
+    text-decoration: none;
+    color:#222;
+}
+.three a:hover{
+    text-decoration: underline;
+   
+}
+/* card */
+.listing-card{
+    border: none !important;
+    margin-bottom:2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* show page */
+.show-img{
+    height:50vh;
+    width:40vh;
+}
+
+.btns{
+    display:flex;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
