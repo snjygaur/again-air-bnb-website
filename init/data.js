@@ -1,354 +1,804 @@
 const sampleListings = [
   {
-    title: "Cozy Beachfront Cottage",
-    description:
-      "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1500,
-    location: "Malibu",
-    country: "United States",
+    title: "Stay in Baga",
+    description: "Comfortable Indian getaway in Baga, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Baga",
+    country: "India"
   },
   {
-    title: "Modern Loft in Downtown",
-    description:
-      "Stay in the heart of the city in this stylish loft apartment. Perfect for urban explorers!",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1200,
-    location: "New York City",
-    country: "United States",
+    title: "Stay in Calangute",
+    description: "Comfortable Indian getaway in Calangute, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Calangute",
+    country: "India"
   },
   {
-    title: "Mountain Retreat",
-    description:
-      "Unplug and unwind in this peaceful mountain cabin. Surrounded by nature, it's a perfect place to recharge.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1000,
-    location: "Aspen",
-    country: "United States",
+    title: "Stay in Candolim",
+    description: "Comfortable Indian getaway in Candolim, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Candolim",
+    country: "India"
   },
   {
-    title: "Historic Villa in Tuscany",
-    description:
-      "Experience the charm of Tuscany in this beautifully restored villa. Explore the rolling hills and vineyards.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2500,
-    location: "Florence",
-    country: "Italy",
+    title: "Stay in Palolem",
+    description: "Comfortable Indian getaway in Palolem, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Palolem",
+    country: "India"
   },
   {
-    title: "Secluded Treehouse Getaway",
-    description:
-      "Live among the treetops in this unique treehouse retreat. A true nature lover's paradise.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 800,
-    location: "Portland",
-    country: "United States",
+    title: "Stay in Anjuna",
+    description: "Comfortable Indian getaway in Anjuna, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Anjuna",
+    country: "India"
   },
   {
-    title: "Beachfront Paradise",
-    description:
-      "Step out of your door onto the sandy beach. This beachfront condo offers the ultimate relaxation.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdGVsc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2000,
-    location: "Cancun",
-    country: "Mexico",
+    title: "Stay in Alleppey",
+    description: "Comfortable Indian getaway in Alleppey, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Alleppey",
+    country: "India"
   },
   {
-    title: "Rustic Cabin by the Lake",
-    description:
-      "Spend your days fishing and kayaking on the serene lake. This cozy cabin is perfect for outdoor enthusiasts.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 900,
-    location: "Lake Tahoe",
-    country: "United States",
+    title: "Stay in Munnar",
+    description: "Comfortable Indian getaway in Munnar, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Munnar",
+    country: "India"
   },
   {
-    title: "Luxury Penthouse with City Views",
-    description:
-      "Indulge in luxury living with panoramic city views from this stunning penthouse apartment.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1622396481328-9b1b78cdd9fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3500,
-    location: "Los Angeles",
-    country: "United States",
-  },
-  {
-    title: "Ski-In/Ski-Out Chalet",
-    description:
-      "Hit the slopes right from your doorstep in this ski-in/ski-out chalet in the Swiss Alps.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1502784444187-359ac186c5bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3000,
-    location: "Verbier",
-    country: "Switzerland",
-  },
-  {
-    title: "Safari Lodge in the Serengeti",
-    description:
-      "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fG1vdW50YWlufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Stay in Varkala",
+    description: "Comfortable Indian getaway in Varkala, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
     price: 4000,
-    location: "Serengeti National Park",
-    country: "Tanzania",
+    location: "Varkala",
+    country: "India"
   },
   {
-    title: "Historic Canal House",
-    description:
-      "Stay in a piece of history in this beautifully preserved canal house in Amsterdam's iconic district.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2FtcGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1800,
-    location: "Amsterdam",
-    country: "Netherlands",
+    title: "Stay in Kovalam",
+    description: "Comfortable Indian getaway in Kovalam, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Kovalam",
+    country: "India"
   },
   {
-    title: "Private Island Retreat",
-    description:
-      "Have an entire island to yourself for a truly exclusive and unforgettable vacation experience.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1618140052121-39fc6db33972?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bG9kZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 10000,
-    location: "Fiji",
-    country: "Fiji",
+    title: "Stay in Wayanad",
+    description: "Comfortable Indian getaway in Wayanad, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Wayanad",
+    country: "India"
   },
   {
-    title: "Charming Cottage in the Cotswolds",
-    description:
-      "Escape to the picturesque Cotswolds in this quaint and charming cottage with a thatched roof.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602088113235-229c19758e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmVhY2glMjB2YWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1200,
-    location: "Cotswolds",
-    country: "United Kingdom",
+    title: "Stay in Jaipur",
+    description: "Comfortable Indian getaway in Jaipur, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Jaipur",
+    country: "India"
   },
   {
-    title: "Historic Brownstone in Boston",
-    description:
-      "Step back in time in this elegant historic brownstone located in the heart of Boston.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1533619239233-6280475a633a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNreSUyMHZhY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2200,
-    location: "Boston",
-    country: "United States",
+    title: "Stay in Udaipur",
+    description: "Comfortable Indian getaway in Udaipur, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Udaipur",
+    country: "India"
   },
   {
-    title: "Beachfront Bungalow in Bali",
-    description:
-      "Relax on the sandy shores of Bali in this beautiful beachfront bungalow with a private pool.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602391833977-358a52198938?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1800,
-    location: "Bali",
-    country: "Indonesia",
+    title: "Stay in Jodhpur",
+    description: "Comfortable Indian getaway in Jodhpur, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Jodhpur",
+    country: "India"
   },
   {
-    title: "Mountain View Cabin in Banff",
-    description:
-      "Enjoy breathtaking mountain views from this cozy cabin in the Canadian Rockies.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1521401830884-6c03c1c87ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1500,
-    location: "Banff",
-    country: "Canada",
+    title: "Stay in Jaisalmer",
+    description: "Comfortable Indian getaway in Jaisalmer, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Jaisalmer",
+    country: "India"
   },
   {
-    title: "Art Deco Apartment in Miami",
-    description:
-      "Step into the glamour of the 1920s in this stylish Art Deco apartment in South Beach.",
-    image: {
-      filename: "listingimage",
-      url: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1600,
-    location: "Miami",
-    country: "United States",
+    title: "Stay in Pushkar",
+    description: "Comfortable Indian getaway in Pushkar, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Pushkar",
+    country: "India"
   },
   {
-    title: "Tropical Villa in Phuket",
-    description:
-      "Escape to a tropical paradise in this luxurious villa with a private infinity pool in Phuket.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1470165301023-58dab8118cc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 3000,
-    location: "Phuket",
-    country: "Thailand",
+    title: "Stay in Manali",
+    description: "Comfortable Indian getaway in Manali, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Manali",
+    country: "India"
   },
   {
-    title: "Historic Castle in Scotland",
-    description:
-      "Live like royalty in this historic castle in the Scottish Highlands. Explore the rugged beauty of the area.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1585543805890-6051f7829f98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJlYWNoJTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Stay in Shimla",
+    description: "Comfortable Indian getaway in Shimla, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Shimla",
+    country: "India"
+  },
+  {
+    title: "Stay in Kasol",
+    description: "Comfortable Indian getaway in Kasol, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
     price: 4000,
-    location: "Scottish Highlands",
-    country: "United Kingdom",
+    location: "Kasol",
+    country: "India"
   },
   {
-    title: "Desert Oasis in Dubai",
-    description:
-      "Experience luxury in the middle of the desert in this opulent oasis in Dubai with a private pool.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 5000,
-    location: "Dubai",
-    country: "United Arab Emirates",
+    title: "Stay in Dharamshala",
+    description: "Comfortable Indian getaway in Dharamshala, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Dharamshala",
+    country: "India"
   },
   {
-    title: "Rustic Log Cabin in Montana",
-    description:
-      "Unplug and unwind in this cozy log cabin surrounded by the natural beauty of Montana.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1586375300773-8384e3e4916f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1100,
-    location: "Montana",
-    country: "United States",
+    title: "Stay in Dalhousie",
+    description: "Comfortable Indian getaway in Dalhousie, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Dalhousie",
+    country: "India"
   },
   {
-    title: "Beachfront Villa in Greece",
-    description:
-      "Enjoy the crystal-clear waters of the Mediterranean in this beautiful beachfront villa on a Greek island.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2500,
-    location: "Mykonos",
-    country: "Greece",
+    title: "Stay in Rishikesh",
+    description: "Comfortable Indian getaway in Rishikesh, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Rishikesh",
+    country: "India"
   },
   {
-    title: "Eco-Friendly Treehouse Retreat",
-    description:
-      "Stay in an eco-friendly treehouse nestled in the forest. It's the perfect escape for nature lovers.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1488462237308-ecaa28b729d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2t5JTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 750,
-    location: "Costa Rica",
-    country: "Costa Rica",
+    title: "Stay in Mussoorie",
+    description: "Comfortable Indian getaway in Mussoorie, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Mussoorie",
+    country: "India"
   },
   {
-    title: "Historic Cottage in Charleston",
-    description:
-      "Experience the charm of historic Charleston in this beautifully restored cottage with a private garden.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1600,
-    location: "Charleston",
-    country: "United States",
+    title: "Stay in Nainital",
+    description: "Comfortable Indian getaway in Nainital, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Nainital",
+    country: "India"
   },
   {
-    title: "Modern Apartment in Tokyo",
-    description:
-      "Explore the vibrant city of Tokyo from this modern and centrally located apartment.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHRva3lvfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 2000,
-    location: "Tokyo",
-    country: "Japan",
+    title: "Stay in Auli",
+    description: "Comfortable Indian getaway in Auli, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Auli",
+    country: "India"
   },
   {
-    title: "Lakefront Cabin in New Hampshire",
-    description:
-      "Spend your days by the lake in this cozy cabin in the scenic White Mountains of New Hampshire.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1200,
-    location: "New Hampshire",
-    country: "United States",
+    title: "Stay in Jim Corbett",
+    description: "Comfortable Indian getaway in Jim Corbett, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Jim Corbett",
+    country: "India"
   },
   {
-    title: "Luxury Villa in the Maldives",
-    description:
-      "Indulge in luxury in this overwater villa in the Maldives with stunning views of the Indian Ocean.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 6000,
-    location: "Maldives",
-    country: "Maldives",
+    title: "Stay in Mumbai",
+    description: "Comfortable Indian getaway in Mumbai, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Mumbai",
+    country: "India"
   },
   {
-    title: "Ski Chalet in Aspen",
-    description:
-      "Hit the slopes in style with this luxurious ski chalet in the world-famous Aspen ski resort.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxha2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-    },
+    title: "Stay in Lonavala",
+    description: "Comfortable Indian getaway in Lonavala, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Lonavala",
+    country: "India"
+  },
+  {
+    title: "Stay in Mahabaleshwar",
+    description: "Comfortable Indian getaway in Mahabaleshwar, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
     price: 4000,
-    location: "Aspen",
-    country: "United States",
+    location: "Mahabaleshwar",
+    country: "India"
   },
   {
-    title: "Secluded Beach House in Costa Rica",
-    description:
-      "Escape to a secluded beach house on the Pacific coast of Costa Rica. Surf, relax, and unwind.",
-    image: {
-      filename: "listingimage",
-      url: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },
-    price: 1800,
-    location: "Costa Rica",
-    country: "Costa Rica",
+    title: "Stay in Alibaug",
+    description: "Comfortable Indian getaway in Alibaug, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Alibaug",
+    country: "India"
   },
+  {
+    title: "Stay in Panchgani",
+    description: "Comfortable Indian getaway in Panchgani, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Panchgani",
+    country: "India"
+  },
+  {
+    title: "Stay in Bengaluru",
+    description: "Comfortable Indian getaway in Bengaluru, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Bengaluru",
+    country: "India"
+  },
+  {
+    title: "Stay in Coorg",
+    description: "Comfortable Indian getaway in Coorg, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Coorg",
+    country: "India"
+  },
+  {
+    title: "Stay in Hampi",
+    description: "Comfortable Indian getaway in Hampi, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Hampi",
+    country: "India"
+  },
+  {
+    title: "Stay in Gokarna",
+    description: "Comfortable Indian getaway in Gokarna, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Gokarna",
+    country: "India"
+  },
+  {
+    title: "Stay in Mysuru",
+    description: "Comfortable Indian getaway in Mysuru, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Mysuru",
+    country: "India"
+  },
+  {
+    title: "Stay in Ooty",
+    description: "Comfortable Indian getaway in Ooty, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Ooty",
+    country: "India"
+  },
+  {
+    title: "Stay in Kodaikanal",
+    description: "Comfortable Indian getaway in Kodaikanal, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Kodaikanal",
+    country: "India"
+  },
+  {
+    title: "Stay in Chennai",
+    description: "Comfortable Indian getaway in Chennai, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4000,
+    location: "Chennai",
+    country: "India"
+  },
+  {
+    title: "Stay in Pondicherry",
+    description: "Comfortable Indian getaway in Pondicherry, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Pondicherry",
+    country: "India"
+  },
+  {
+    title: "Stay in Rameswaram",
+    description: "Comfortable Indian getaway in Rameswaram, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Rameswaram",
+    country: "India"
+  },
+  {
+    title: "Stay in Gangtok",
+    description: "Comfortable Indian getaway in Gangtok, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Gangtok",
+    country: "India"
+  },
+  {
+    title: "Stay in Pelling",
+    description: "Comfortable Indian getaway in Pelling, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Pelling",
+    country: "India"
+  },
+  {
+    title: "Stay in Lachung",
+    description: "Comfortable Indian getaway in Lachung, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Lachung",
+    country: "India"
+  },
+  {
+    title: "Stay in Namchi",
+    description: "Comfortable Indian getaway in Namchi, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Namchi",
+    country: "India"
+  },
+  {
+    title: "Stay in Ravangla",
+    description: "Comfortable Indian getaway in Ravangla, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Ravangla",
+    country: "India"
+  },
+  {
+    title: "Stay in Shillong",
+    description: "Comfortable Indian getaway in Shillong, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Shillong",
+    country: "India"
+  },
+  {
+    title: "Stay in Cherrapunji",
+    description: "Comfortable Indian getaway in Cherrapunji, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Cherrapunji",
+    country: "India"
+  },
+  {
+    title: "Stay in Mawlynnong",
+    description: "Comfortable Indian getaway in Mawlynnong, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4000,
+    location: "Mawlynnong",
+    country: "India"
+  },
+  {
+    title: "Stay in Dawki",
+    description: "Comfortable Indian getaway in Dawki, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Dawki",
+    country: "India"
+  },
+  {
+    title: "Stay in Nongriat",
+    description: "Comfortable Indian getaway in Nongriat, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Nongriat",
+    country: "India"
+  },
+  {
+    title: "Stay in Darjeeling",
+    description: "Comfortable Indian getaway in Darjeeling, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Darjeeling",
+    country: "India"
+  },
+  {
+    title: "Stay in Kalimpong",
+    description: "Comfortable Indian getaway in Kalimpong, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Kalimpong",
+    country: "India"
+  },
+  {
+    title: "Stay in Kolkata",
+    description: "Comfortable Indian getaway in Kolkata, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Kolkata",
+    country: "India"
+  },
+  {
+    title: "Stay in Digha",
+    description: "Comfortable Indian getaway in Digha, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Digha",
+    country: "India"
+  },
+  {
+    title: "Stay in Siliguri",
+    description: "Comfortable Indian getaway in Siliguri, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Siliguri",
+    country: "India"
+  },
+  {
+    title: "Stay in Puri",
+    description: "Comfortable Indian getaway in Puri, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Puri",
+    country: "India"
+  },
+  {
+    title: "Stay in Bhubaneswar",
+    description: "Comfortable Indian getaway in Bhubaneswar, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Bhubaneswar",
+    country: "India"
+  },
+  {
+    title: "Stay in Konark",
+    description: "Comfortable Indian getaway in Konark, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4000,
+    location: "Konark",
+    country: "India"
+  },
+  {
+    title: "Stay in Gopalpur",
+    description: "Comfortable Indian getaway in Gopalpur, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Gopalpur",
+    country: "India"
+  },
+  {
+    title: "Stay in Chilika",
+    description: "Comfortable Indian getaway in Chilika, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Chilika",
+    country: "India"
+  },
+  {
+    title: "Stay in Port Blair",
+    description: "Comfortable Indian getaway in Port Blair, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Port Blair",
+    country: "India"
+  },
+  {
+    title: "Stay in Havelock Island",
+    description: "Comfortable Indian getaway in Havelock Island, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Havelock Island",
+    country: "India"
+  },
+  {
+    title: "Stay in Neil Island",
+    description: "Comfortable Indian getaway in Neil Island, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Neil Island",
+    country: "India"
+  },
+  {
+    title: "Stay in Baratang",
+    description: "Comfortable Indian getaway in Baratang, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Baratang",
+    country: "India"
+  },
+  {
+    title: "Stay in Long Island",
+    description: "Comfortable Indian getaway in Long Island, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Long Island",
+    country: "India"
+  },
+  {
+    title: "Stay in Ahmedabad",
+    description: "Comfortable Indian getaway in Ahmedabad, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Ahmedabad",
+    country: "India"
+  },
+  {
+    title: "Stay in Kutch",
+    description: "Comfortable Indian getaway in Kutch, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Kutch",
+    country: "India"
+  },
+  {
+    title: "Stay in Dwarka",
+    description: "Comfortable Indian getaway in Dwarka, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4000,
+    location: "Dwarka",
+    country: "India"
+  },
+  {
+    title: "Stay in Somnath",
+    description: "Comfortable Indian getaway in Somnath, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Somnath",
+    country: "India"
+  },
+  {
+    title: "Stay in Saputara",
+    description: "Comfortable Indian getaway in Saputara, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Saputara",
+    country: "India"
+  },
+  {
+    title: "Stay in Bhopal",
+    description: "Comfortable Indian getaway in Bhopal, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Bhopal",
+    country: "India"
+  },
+  {
+    title: "Stay in Indore",
+    description: "Comfortable Indian getaway in Indore, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Indore",
+    country: "India"
+  },
+  {
+    title: "Stay in Pachmarhi",
+    description: "Comfortable Indian getaway in Pachmarhi, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Pachmarhi",
+    country: "India"
+  },
+  {
+    title: "Stay in Khajuraho",
+    description: "Comfortable Indian getaway in Khajuraho, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Khajuraho",
+    country: "India"
+  },
+  {
+    title: "Stay in Ujjain",
+    description: "Comfortable Indian getaway in Ujjain, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Ujjain",
+    country: "India"
+  },
+  {
+    title: "Stay in Varanasi",
+    description: "Comfortable Indian getaway in Varanasi, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Varanasi",
+    country: "India"
+  },
+  {
+    title: "Stay in Agra",
+    description: "Comfortable Indian getaway in Agra, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Agra",
+    country: "India"
+  },
+  {
+    title: "Stay in Lucknow",
+    description: "Comfortable Indian getaway in Lucknow, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4000,
+    location: "Lucknow",
+    country: "India"
+  },
+  {
+    title: "Stay in Mathura",
+    description: "Comfortable Indian getaway in Mathura, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Mathura",
+    country: "India"
+  },
+  {
+    title: "Stay in Ayodhya",
+    description: "Comfortable Indian getaway in Ayodhya, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Ayodhya",
+    country: "India"
+  },
+  {
+    title: "Stay in Amritsar",
+    description: "Comfortable Indian getaway in Amritsar, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Amritsar",
+    country: "India"
+  },
+  {
+    title: "Stay in Patiala",
+    description: "Comfortable Indian getaway in Patiala, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Patiala",
+    country: "India"
+  },
+  {
+    title: "Stay in Ludhiana",
+    description: "Comfortable Indian getaway in Ludhiana, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Ludhiana",
+    country: "India"
+  },
+  {
+    title: "Stay in Anandpur Sahib",
+    description: "Comfortable Indian getaway in Anandpur Sahib, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Anandpur Sahib",
+    country: "India"
+  },
+  {
+    title: "Stay in Pathankot",
+    description: "Comfortable Indian getaway in Pathankot, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Pathankot",
+    country: "India"
+  },
+  {
+    title: "Stay in Patna",
+    description: "Comfortable Indian getaway in Patna, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Patna",
+    country: "India"
+  },
+  {
+    title: "Stay in Bodh Gaya",
+    description: "Comfortable Indian getaway in Bodh Gaya, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Bodh Gaya",
+    country: "India"
+  },
+  {
+    title: "Stay in Rajgir",
+    description: "Comfortable Indian getaway in Rajgir, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4000,
+    location: "Rajgir",
+    country: "India"
+  },
+  {
+    title: "Stay in Vaishali",
+    description: "Comfortable Indian getaway in Vaishali, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Vaishali",
+    country: "India"
+  },
+  {
+    title: "Stay in Nalanda",
+    description: "Comfortable Indian getaway in Nalanda, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Nalanda",
+    country: "India"
+  },
+  {
+    title: "Stay in Hyderabad",
+    description: "Comfortable Indian getaway in Hyderabad, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1550,
+    location: "Hyderabad",
+    country: "India"
+  },
+  {
+    title: "Stay in Warangal",
+    description: "Comfortable Indian getaway in Warangal, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 1900,
+    location: "Warangal",
+    country: "India"
+  },
+  {
+    title: "Stay in Nizamabad",
+    description: "Comfortable Indian getaway in Nizamabad, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2250,
+    location: "Nizamabad",
+    country: "India"
+  },
+  {
+    title: "Stay in Karimnagar",
+    description: "Comfortable Indian getaway in Karimnagar, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2600,
+    location: "Karimnagar",
+    country: "India"
+  },
+  {
+    title: "Stay in Medak",
+    description: "Comfortable Indian getaway in Medak, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 2950,
+    location: "Medak",
+    country: "India"
+  },
+  {
+    title: "Stay in Guwahati",
+    description: "Comfortable Indian getaway in Guwahati, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3300,
+    location: "Guwahati",
+    country: "India"
+  },
+  {
+    title: "Stay in Kaziranga",
+    description: "Comfortable Indian getaway in Kaziranga, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 3650,
+    location: "Kaziranga",
+    country: "India"
+  },
+  {
+    title: "Stay in Majuli",
+    description: "Comfortable Indian getaway in Majuli, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4000,
+    location: "Majuli",
+    country: "India"
+  },
+  {
+    title: "Stay in Jorhat",
+    description: "Comfortable Indian getaway in Jorhat, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4350,
+    location: "Jorhat",
+    country: "India"
+  },
+  {
+    title: "Stay in Tezpur",
+    description: "Comfortable Indian getaway in Tezpur, perfect for exploring local attractions, food, culture and nearby experiences.",
+    image: { filename: "listingimage", url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" },
+    price: 4700,
+    location: "Tezpur",
+    country: "India"
+  }
 ];
 
 module.exports = { data: sampleListings };
-  
-  module.exports = { data: sampleListings };
