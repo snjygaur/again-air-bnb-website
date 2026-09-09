@@ -1,22 +1,26 @@
 const mongoose = require("mongoose");
 const initData = require("./data.js");
 const Listing = require("../models/listing");
+const Review = require("../models/review");
+const User = require("../models/user");
+require("dotenv").config();
 
-async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/again_wanderlust_practice_by_me")
- }
- 
- main().then((res) =>{
-     console.log("mongoose also connected");
- }).catch((err)=>{
-     console.log(err);
- })
- 
+async function main() {
+  const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/again_wanderlust_practice_by_me";
+  await mongoose.connect(mongoUri);
+  console.log("mongoose connected");
 
-let initdata =  async() => {
-     await Listing.deleteMany({});
-     initData.data = initData.data.map((obj) => ({...obj,owner:"66bcf0ea6667abcea3cd23e3",}));
-      await Listing.insertMany(initData.data);
+  // Full reset requested for the fresh project dataset.
+  await Review.deleteMany({});
+  await Listing.deleteMany({});
+  await User.deleteMany({});
+
+  await Listing.insertMany(initData.data);
+  console.log(`Database reset complete: ${initData.data.length} India listings inserted and all old users/listings/reviews removed.`);
 }
 
-initdata();
+main()
+  .catch((err) => console.error(err))
+  .finally(async () => {
+    await mongoose.disconnect();
+  });
