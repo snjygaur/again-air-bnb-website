@@ -86,6 +86,12 @@ app.use((req,res,next) =>{
     next();
 })
 
+// Keep the existing home page behavior intact while making the service root
+// open the main listings page instead of showing the 404 page.
+app.get("/", (req,res) => {
+    res.redirect("/listings");
+});
+
 app.use("/listings",listings);
 app.use("/listings/:id/reviews",reviews);
 app.use("/",user);
