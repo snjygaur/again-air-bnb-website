@@ -6,7 +6,7 @@ const User = require("../models/user");
 require("dotenv").config();
 
 async function main() {
-  const mongoUri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/again_wanderlust_practice_by_me";
+  const mongoUri = process.env.ATLASDB_URL || process.env.MONGO_URI || "mongodb://127.0.0.1:27017/again_wanderlust_practice_by_me";
   await mongoose.connect(mongoUri);
   console.log("mongoose connected");
 
